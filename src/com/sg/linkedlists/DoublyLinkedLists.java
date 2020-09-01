@@ -164,4 +164,34 @@ public class DoublyLinkedLists<T> implements Iterable<T> {
         return remove(trav);
     }
 
+    // Find the index of a particular value in the linked list
+    public int indexOf(Object obj) {
+        int index = 0;
+        DLNode<T> trav = head;
+
+        // Support searching for null
+        if (obj == null) {
+            for (trav = head; trav != null; trav = trav.next, index++) {
+                if (trav.data == null)
+                    return index;
+            }
+        }
+        // Search for non null object
+        else {
+            for (trav = head; trav != null; trav = trav.next, index++){
+                if (obj.equals(trav.data))
+                    return index;
+            }
+        }
+
+        return -1;
+    }
+
+    // Check if a value is contained within the linked list
+    public boolean contains(Object obj){
+        return indexOf(obj) != -1;
+    }
+
+
+
 }
