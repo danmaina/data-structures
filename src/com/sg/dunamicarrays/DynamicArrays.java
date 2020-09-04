@@ -40,7 +40,7 @@ public class DynamicArrays<T> implements Iterable<T> {
         len = 0;
     }
 
-    public void add (T elem) {
+    public void add(T elem) {
         if (len +1 >= capacity){
             if (capacity == 0)
                 capacity = 1;
