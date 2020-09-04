@@ -11,7 +11,7 @@ public class Stacks {
     private static final char LEFT_BRACKET = '(';
     private static final char RIGHT_BRACKET = ')';
 
-    public boolean stringMatches(String s) {
+    public boolean challengeMatchStrings(String s) {
 
         // Create Stack
         Stack<Character> st = new Stack<>();
